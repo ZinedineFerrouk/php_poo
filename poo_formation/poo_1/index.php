@@ -44,6 +44,18 @@ class Voiture {
         $this->accelerer(100);
     }
 
+    public function generateHtml(){
+        $html = '';
+
+        $html.= '<div>'.
+            '<h1>'. $this->getMarque().'</h1>'.
+            '<h1>'. $this->getColor().'</h1>'.
+            '<h1>'. $this->getPuissance().'</h1>'.
+        '</div>';
+
+        return $html;
+    }
+
     public function getMarque(){
         return $this->marque;
     }
@@ -81,7 +93,6 @@ class Voiture {
     public function setPlace($place){
         $this->nbrPlace = $place;
     }
-
 }
 
 $car = new Voiture();
@@ -106,13 +117,7 @@ echo '<pre>';
 var_dump($renault);
 echo '</pre>';
 
-?>
+echo $renault->generateHtml();
 
-<div>
-    <h1> <?php echo $renault->getMarque() ?> </h1>
-    <h1> <?php echo $renault->getColor() ?> </h1>
-    <h1> <?php echo $renault->getPuissance() ?> </h1>
-</div>
 
-<?php
 
