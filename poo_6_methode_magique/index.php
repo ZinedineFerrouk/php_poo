@@ -7,7 +7,8 @@ class PHPString
     private $str;
     private $length;
 
-    public function __construct(string $param) {
+    public function __construct(string $param)
+    {
         $this->str = $param;
         $this->length = mb_strlen($this->str);
     }
@@ -58,8 +59,32 @@ echo isset($str->str) ? 'Existe !!!' : 'N\'existe pas !!!';
 
 
 
+/////////////////////// RIEN A VOIR ////////////////
+echo '<br>';
+echo '<br>';
 
+// PGCD
+function calculPGCD(int $a, int $b)
+{
+    if ($a > $b) {
+        $x = $a;
+        $y = $b;
+    } else {
+        $x = $b;
+        $y = $a;
+    }
 
+    while ($x % $y !== 0) {
+        $result = $x % $y;
+        break;
+    }
+
+    echo 'Le PGDC de ' . $a . ' et ' . $b . ' vaut -> ' . $result;
+}
+
+calculPGCD(21, 15);
+
+echo '<br>';
 
 
 
