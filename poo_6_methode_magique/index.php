@@ -75,14 +75,15 @@ function calculPGCD(int $a, int $b)
     }
 
     while ($x % $y !== 0) {
-        $result = $x % $y;
-        break;
+        $reste = $x % $y;
+        $x = $y;
+        $y = $reste;
     }
 
-    echo 'Le PGDC de ' . $a . ' et ' . $b . ' vaut -> ' . $result;
+    echo 'Le PGDC de ' . $a . ' et ' . $b . ' vaut -> ' . $y;
 }
 
-calculPGCD(21, 15);
+calculPGCD(100, 50);
 
 echo '<br>';
 
