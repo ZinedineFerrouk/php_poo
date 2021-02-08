@@ -5,6 +5,7 @@ class Facture
     const TVA = 20;
 
     private static $var;   
+    
     public function __construct(){
         self::$var = "POO";
     }

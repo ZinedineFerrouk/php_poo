@@ -87,24 +87,6 @@ calculPGCD(100, 50);
 
 echo '<br>';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // RIEN A VOIR C'ETAIT JUSTE POUR M'ENTRAINER
 // class User
 // {
