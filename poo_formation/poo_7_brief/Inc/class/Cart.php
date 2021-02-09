@@ -26,7 +26,7 @@ class Cart
     public function showAll()
     {
         foreach ($this->item as $key => $value) {
-            echo '<h3>' . $item->getName() . '</h3>';
+            // echo '<h3>' . $item->getName() . '</h3>';
         }
     }
 }
