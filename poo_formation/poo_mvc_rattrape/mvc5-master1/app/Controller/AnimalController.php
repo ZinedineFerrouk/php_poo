@@ -112,13 +112,30 @@ class AnimalController extends Controller
     // SUPPRIMER un animal
     public function supprimer($id)
     {
-        $animal = AnimalModel::findById($id);
-        if (empty($animal)) {
-            $this->Abort404();
-        }
-
+        $animal = $this->ifAnimalExistOr404($id);
         // INSERTION DANS LA BDD
         AnimalModel::supprimer($animal->id);
         $this->redirect('animals');
     }
+
+
+    // Recupère l'id
+    private function ifAnimalExistOr404($id)
+    {
+        $animal = AnimalModel::findById($id);
+        if (empty($animal)) {
+            $this->Abort404();
+        }
+        return $animal;
+    }
+
+    // validation
+    // private function validationAnimal($id)
+    // {
+    //     $animal = AnimalModel::findById($id);
+    //     if (empty($animal)) {
+    //         $this->Abort404();
+    //     }
+    //     return $animal;
+    // }
 }

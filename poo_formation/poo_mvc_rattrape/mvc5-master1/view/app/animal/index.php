@@ -13,7 +13,7 @@
         <p><?= nl2br($animal->description); ?></p>
         <a href="<?= $view->path('one-animal',array($animal->id)); ?>">Voir plus</a>
         <a href="<?= $view->path('updateAnimal',array($animal->id)); ?>">Modifier</a>
-        <a href="<?= $view->path('deleteAnimal',array($animal->id)); ?>">Supprimer</a>
+        <a onclick="return confirm('Voulez vous effacez cet animal')" href="<?= $view->path('deleteAnimal',array($animal->id)); ?>">Supprimer</a>
     </div>
 <?php } ?>
 </div>
