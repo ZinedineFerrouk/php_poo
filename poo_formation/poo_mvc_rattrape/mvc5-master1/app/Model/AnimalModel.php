@@ -9,6 +9,7 @@ class AnimalModel extends Model
 {
     protected static $table = 'animal';
 
+    // INSERT UN NOUVEL ANIMAL DANS LA BDD 
     public static function insert($post)
     {
         App::getDatabase()->prepareInsert(
@@ -17,6 +18,7 @@ class AnimalModel extends Model
         );
     }
 
+    // MODIFIE UN ANIMAL ET L'INSERT DANS LA BDD 
     public static function update($post, $id)
     {
         App::getDatabase()->prepareInsert(
@@ -25,6 +27,7 @@ class AnimalModel extends Model
         );
     }
 
+    // SUPPRIME UN ANIMAL DANS LA BDD 
     public static function supprimer($id)
     {
         App::getDatabase()->prepareInsert(

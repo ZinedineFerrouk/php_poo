@@ -88,8 +88,9 @@ class AnimalController extends Controller
 
             // Validation
             $valid = new Validation();
-            $errors['title'] = $valid->textValid($post['title'], 'titre', 3, 100);
-            $errors['description'] = $valid->textValid($post['description'], 'description', 3, 100);
+            // $errors['title'] = $valid->textValid($post['title'], 'titre', 3, 100);
+            // $errors['description'] = $valid->textValid($post['description'], 'description', 3, 100);
+            $errors = $this->validationAnimal($errors, $valid, $post);
 
             // IS VALID
             if ($valid->IsValid($errors)) {
@@ -130,12 +131,11 @@ class AnimalController extends Controller
     }
 
     // validation
-    // private function validationAnimal($id)
-    // {
-    //     $animal = AnimalModel::findById($id);
-    //     if (empty($animal)) {
-    //         $this->Abort404();
-    //     }
-    //     return $animal;
-    // }
+    private function validationAnimal($errors, $instance, $post)
+    {
+        $errors['title'] = $instance->textValid($post['title'], 'titre', 3, 100);
+        $errors['description'] = $instance->textValid($post['description'], 'description', 3, 1000);
+
+        return $errors;
+    }
 }
