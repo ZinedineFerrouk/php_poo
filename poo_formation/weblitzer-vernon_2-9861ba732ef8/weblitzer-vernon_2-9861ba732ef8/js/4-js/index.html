@@ -1,0 +1,43 @@
+<script type="text/javascript">
+// OBJECT <=> Class
+  // propriété ( attributs ) => caractéristique de l'objet (variable)
+  // methodes => agir sur l'objet   ( fonction )
+
+  // Instance d'un objet
+  let voiture = new Object();
+  // Propriété
+  voiture.masse = 1000;
+  voiture.vitesse = 0;
+  // Methodes
+  // EC = 0,5 x mv2
+  voiture.energieCinetique = function() {
+    if(voiture.masse > 0) {
+      return 0.5 * voiture.masse * Math.pow(voiture.vitesse,2);
+    } else {
+      return false;
+    }
+  }
+  voiture.vitesse = 30;
+  console.log(voiture);
+  console.log(voiture.energieCinetique());
+  voiture.masse -= 120;
+  console.log(voiture.energieCinetique());
+  // couleur à la voiture
+  voiture.couleur = 'rouge';
+  voiture.afficherInfo = function() {
+    console.log('<p>La voiture roule à ' + voiture.vitesse + ' km/h et sa masse est de ' + voiture.masse + ' kg et sa couleur le '+voiture.couleur+'</p>')
+  }
+  voiture.afficherInfo();
+  voiture.couleur = 'Jaune';
+  voiture.afficherInfo();
+
+  // OBJET window
+  //var nom = window.prompt('Quel est votre nom ?')
+  // alert
+  // confirm
+
+
+
+
+
+</script>

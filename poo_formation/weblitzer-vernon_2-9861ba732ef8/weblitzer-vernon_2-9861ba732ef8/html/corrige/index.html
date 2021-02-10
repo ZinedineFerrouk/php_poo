@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Weblitzer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/styles.css">
+  </head>
+  <body>
+
+    <header id="header">
+        <div class="menufixed">
+          <div class="wrap">
+            <a href="index.html"><div class="logo"></div></a>
+            <nav>
+              <ul>
+                <li><a class="active" href="#header">Accueil</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#inscription">Inscription</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="wrap">
+            <section id="presentation">
+                  <p>Bienvenue sur le site de Weblitzer !</p>
+                  <p>Si vous aussi vous souhaitez devenir développeur web,</p>
+                  <p>Inscrivez-vous dès maintenant !</p>
+                  <a class="btn-inscription" href="#inscription">Inscription</a>
+            </section>
+        </div>
+
+    </header>
+
+    <div id="container">
+
+      <section id="programme">
+        <div class="wrap">
+            <h2>Le programme</h2>
+            <div class="ligne"></div>
+            <p class="textintro">Le programme de formation est intensif et vous demande implication et travail.</p>
+            <div class="languages">
+                  <div class="item">
+                        <img src="asset/img/html5.png" alt="">
+                        <h3>HTML5</h3>
+                        <p>L’Hypertext Markup Language, est le format de données conçu pour représenter les pages web.</p>
+                  </div>
+                  <div class="item">
+                        <img src="asset/img/css3.png" alt="">
+                        <h3>CSS3</h3>
+                        <p>Le CSS, de l’anglais Cascading Style Sheets, décrit la présentation des documents HTML et XML.</p>
+                  </div>
+                  <div class="item">
+                        <img src="asset/img/php.png" alt="">
+                        <h3>PHP</h3>
+                        <p>PHP Hypertext Preprocessor est un langage de programmation utilisé pour produire des pages Web dynamiques.</p>
+                  </div>
+                  <div class="item">
+                        <img src="asset/img/wp.png" alt="">
+                        <h3>WORDPRESS</h3>
+                        <p>WordPress est surtout utilisé comme moteur de blog, mais ses fonctionnalités lui permettent de gérer n'importe quel site web.</p>
+                  </div>
+
+                  <div class="clear">
+
+                  </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="inscription">
+          <div class="wrap2">
+            <h2>Inscriptions</h2>
+            <div class="ligne"></div>
+            <p class="textintro">Si vous souhaitez vous inscrire pour la prochaine session, remplissez le formulaire suivant :</p>
+
+            <form action="#inscription" method="post">
+                <div class="w50">
+                  <label for="name">Votre Nom</label>
+                  <input class="inputerror" type="text" name="name" value="" placeholder="Ex: John Doe">
+                  <span class="error">Veuillez renseigner un nom</span>
+                </div>
+
+                <div class="w50">
+                  <label for="email">Votre Email</label>
+                  <input type="email" name="email" value="" placeholder="Ex: johndoe@gmail.com">
+                </div>
+
+                <div class="w100">
+                  <label for="message">Votre Message</label>
+                  <textarea name="message" rows="8" cols="80" placeholder="Bonjour"></textarea>
+                </div>
+
+                <input type="submit" name="submit" value="Envoyer">
+            </form>
+          </div>
+      </section>
+
+    </div>
+
+    <footer id="footer">
+      <p>&copy;2018 - Weblitzer &reg;</p>
+      <a class="backtotop" href="#header">Retour en haut</a>
+    </footer>
+
+  </body>
+</html>

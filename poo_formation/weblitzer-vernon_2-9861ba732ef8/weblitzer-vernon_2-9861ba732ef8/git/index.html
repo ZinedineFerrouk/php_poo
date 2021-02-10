@@ -1,0 +1,43 @@
+MAC   =>  windows
+
+pwd   => chdir
+ls     =>  dir
+cd   =>   cd
+
+
+git config --global user.email 'email@fdfsd.fr'
+git config --global user.name 'pseudo'
+
+git init => permet de créer un repository dans le working directory
+git status => permet de voir quelles modifications ont été effectuées sur les fichiers de l'application
+
+
+git add index.html
+git add --all
+git commit -m "init git"
+
+git commit -a -m "new commit"
+
+git log
+git reflog
+git diff
+
+git branch
+git branch develop => creation de la branch develop
+git checkout develop  => deplacement vers la branch develop
+// coder
+// add & commit de la branch develop
+git checkout master
+git merge develop
+git branch -d develop
+
+git remote add origin https://github.com/nomprenom/nomdurepo.git
+git push -u origin master
+
+
+git clone https://github.com/nomprenom/nomdurepo.git
+
+git push
+
+// pull request 
+git push origin name-branch

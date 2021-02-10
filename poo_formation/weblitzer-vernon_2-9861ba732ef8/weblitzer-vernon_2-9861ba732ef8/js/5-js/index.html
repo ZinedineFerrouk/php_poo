@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/master.css">
+    <style media="screen">
+      #test5 {
+        width:200px;
+        height: 200px;
+        background-color: lime;
+        position:absolute;
+        top:0;
+        right:0;
+        transition: top 1.5s,right 5s;
+      }
+    </style>
+
+  </head>
+  <body>
+
+
+    <p id="cible">titre du site</p>
+
+    <ul>
+      <li>banane</li>
+      <li>kiwi</li>
+      <li>papaye</li>
+    </ul>
+
+    <h2 class="bigtitle">titre 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor idatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2 class="bigtitle">titre 2</h2>
+    <p>Lorem ipsum dolor sit amet, consecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2 class="bigtitle">titre 3</h2>
+    <p>Lorem ipsum dolor sit amet, conseccat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div id="btnclick" onclick="clickPerso()">click ici</div>
+
+    <p onmouseover="changeColor(this)">dfskhkfjsdhfk</p>
+    <p onmouseout="changeColor(this)">mlkfmlfdgmldfkgd</p>
+    <p onclick="changeColor(this)">kmgkfdlkgmldkgmfd</p>
+
+    <div id="news">C'est les infos</div>
+
+    <div id="boite">ici mon premier texte.</div>
+
+    <div id="test5"></div>
+
+    <script type="text/javascript">
+      // OBJET document
+      var title = document.getElementById('cible');
+      console.log(title)
+      title.style.color = 'red';
+      title.style.backgroundColor = 'yellow'
+      // tag => balise
+      var list = document.getElementsByTagName('li');
+      console.log(list)
+      list[1].style.color = 'orange'
+      list[2].style.color = 'blue'
+
+      var grandtitre = document.getElementsByClassName('bigtitle');
+      console.log(grandtitre)
+      for (var i = 0; i < grandtitre.length; i++) {
+        grandtitre[i].style.fontSize = '30px';
+      }
+
+      // aller chercher contenu d'une balise
+      console.log(title.innerHTML)
+      // change le contenu de la cible
+      title.innerHTML = 'autre Titre';
+
+      // EVENTS
+      function clickPerso()
+      {
+        var btnclick = document.getElementById('btnclick')
+        btnclick.innerHTML = 'Déjà clické'
+        btnclick.style.color = 'blue'
+        document.getElementById('cible').style.fontSize = '70px'
+      }
+
+      function changeColor(celuila)
+      {
+        celuila.style.color = 'white';
+        celuila.style.backgroundColor = 'orange';
+      }
+
+      var infos = document.getElementById('news')
+      // Ecouteur d'evenements
+      infos.addEventListener('click',function(){
+        infos.innerHTML = 'C\'est super les infos';
+        infos.style.color = 'orange'
+      })
+      // exo
+      var boite = document.getElementById('boite')
+      var texte = boite.innerHTML
+      boite.addEventListener('mouseenter', function(){
+        boite.innerHTML = 'texte si je rentre';
+        boite.style.color = 'green'
+      })
+      boite.addEventListener('mouseleave', function(){
+        boite.innerHTML = texte;
+        boite.style.color = 'red'
+      })
+
+      var test5 = document.getElementById('test5');
+      test5.addEventListener('click',function(){
+        test5.style.top = '100px';
+        test5.style.right = '100px';
+      })
+
+
+
+    </script>
+
+  </body>
+</html>

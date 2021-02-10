@@ -1,0 +1,79 @@
+<?php
+//======================================================================
+// JOUR 1
+//======================================================================
+
+//Un blog permet de :
+/*
+-	lister des articles;
+-	créer et éditer des articles;
+-	supprimer des articles;
+-	commenter des articles;
+-   trier des articles , recherche dans titre de l'article
+-   paginer des articles.
+-	modérer des commentaires;
+-	supprimer des commentaires;
+*/
+
+
+
+// Il n’y a pas de droit spécifique pour la lecture d’un article ou d’un commentaire.
+// Vous devrez creer un back-office (qui sera accessible à tous) mais qui auras un design legerement differents, et un header avec des liens differents
+// C'est dans le back-office que vous pouvez créer/modifier/supprimer un article.
+
+// Pour pouvoir créer un commentaire, l’utilisateur peut être anonyme mais il doit renseigner un pseudonyme.
+
+// Pour pouvoir moderer/supprimer un commentaire, Cela se fera dans la partie Back-office.
+// Dans la vrai vie, ce back-office serait sécurisé.
+
+// Remarque: Chaque étape devra mettre montré et validé avant d'attaquer l'étape suivante.
+
+//======================================================================
+// Etape 1: Création de la base de données avec les tables suivantes :
+//======================================================================
+
+// articles (id, title(255), content(text), auteur, created_at, updated_at, status)
+//	comments (id, id_article, content(text), auteur, created_at(datetime), updated_at, status(varchar 20))
+
+
+//======================================================================
+// Etape 2: Développement du formulaire de création d’un article. (Back-office)
+//======================================================================
+
+// création du fichier newpost.php , lien accesible dans back-office
+// faire un lien de la page dashboard vers le fichier.
+// Cette étape comprend le développement du formulaire en HTML et l’enregistrement des informations en base de données.
+// créez si possible des fonctions pour la validation de formulaire. qui vous serviront toujours pour la suite
+//======================================================================
+// Etape 3: Développement du formulaire d’édition d’un article existant. (Back-office)
+//======================================================================
+
+// création du fichier editpost.php , lien accesible dans back-office à partir du listing des articles
+// Cette étape comprend le développement du formulaire en HTML et l’update des informations en base de données.
+
+//======================================================================
+// Etape 4: Lister les articles créés sur la page d'accueil (Front)
+//======================================================================
+
+	// le status des article doit etre egale à 1
+ 	// seulement leurs titres, le nom de l’auteur et la date de publication.
+
+//======================================================================
+// Etape 5: Permettre de consulter le détail d’un article.
+//======================================================================
+
+// creation fichier single.php
+// On y voit le titre de l’article, son contenu, l’auteur, la date de publication et la date de modification si elle existe.
+
+//======================================================================
+// Etape 6: Permettre de supprimer un article.
+//======================================================================
+
+// La suppression d’un article est fictive. Il s’agit en fait de mettre le status d’un article à 0.
+// Limiter la liste des articles aux articles qui ont un statut à 1 sur index.php mais aussi sur le back-office
+
+
+//======================================================================
+// Creation d'un back-office, creation front-office
+//======================================================================
+// faire quelque chose de jolie ++

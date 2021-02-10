@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>data set</title>
+  </head>
+  <body>
+    <article class="music" onclick="afficherDetail(this)"
+      data-title="michelle ma belle"
+      data-artiste="beatles"
+      data-date-de-sortie="12/12/78">
+      <p>Morceaux 1</p>
+    </article>
+    <article class="music" onclick="afficherDetail(this)"
+      data-title="so lonely"
+      data-artiste="fef"
+      data-date-de-sortie="22/12/20">
+      <p>Morceaux 2</p>
+    </article>
+
+    <div id="infos"></div>
+
+    <script type="text/javascript">
+
+      function afficherDetail(el) {
+        var infos = document.getElementById('infos')
+        var str = '';
+        str += '<h2>' + el.dataset.title + '</h2>'
+        str += '<p>Artiste: ' + el.dataset.artiste + '</p>'
+        str += '<p>Date de sortie: ' + el.dataset.dateDeSortie + '</p>'
+        infos.innerHTML = str
+      }
+
+      var currentDate = new Date();
+      console.log(currentDate)
+      console.log(currentDate.getFullYear())
+      console.log(currentDate.getHours())
+      console.log(currentDate.getDay()) // dimanche 0
+
+      function uneFonction()
+      {
+        console.log('test setTimeout')
+      }
+      // lancer la unefonction au bout de 3 secondes
+      setTimeout(uneFonction,3000)
+
+      function uneFonction2()
+      {
+        console.log('test setInterval')
+      }
+      var x = setInterval(uneFonction2,1000)
+
+      // stop du setInterval => x
+      clearInterval(x)
+
+    </script>
+
+  </body>
+</html>

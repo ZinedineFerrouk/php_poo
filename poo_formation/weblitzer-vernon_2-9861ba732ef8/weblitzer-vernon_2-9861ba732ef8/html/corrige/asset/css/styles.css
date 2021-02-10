@@ -1,0 +1,175 @@
+/* @import "reset.css"; */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* clear */
+.clear:before,.clear:after { content:' '; display:table; }
+.clear:after { clear:both; }
+.clear { *zoom:1;}
+
+/* https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+/* Typo */
+/* https://fonts.google.com/specimen/Titillium+Web?selection.family=Titillium+Web */
+body { font:400 18px/1.3 'Titillium Web', sans-serif;color:#fff; background-color: #fff;}
+.wrap {
+	width:100%;
+	max-width: 1040px;
+	margin:0 auto;
+  /* background-color: lime; */
+}
+.wrap2 {
+	width:100%;
+	max-width: 840px;
+	margin:0 auto;
+}
+/* Header */
+#header {background-color: #87509c;position: relative;}
+#header .logo {
+  background: url('../img/weblitzer.svg') no-repeat;
+  width: 200px;height:72px;
+  float: left;
+}
+#header .menufixed {position: fixed;background-color: #87509c;width: 100%;padding: 30px 10px;}
+#header nav {
+    float: right;
+    margin-top: 20px;
+}
+#header nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+#header nav ul li a {
+  color:#fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 2px 3px;
+  background-color: #87509c;
+}
+#header nav ul li a:hover, #header nav ul li a.active{
+  background-color: #643a79;
+}
+#header #presentation {
+  padding: 130px 0 80px 0;
+  text-align: center;
+  font-size: 1.2em; /* http://pxtoem.com/ */
+
+}
+#header #presentation .btn-inscription {
+  display: inline-block;
+  background-color: #eb7d4b;text-decoration: none;color:#fff;padding: 20px 60px;margin-top: 20px;
+  text-transform: uppercase;font-size: 1.4em;border-radius: 4px;
+	box-shadow: 8px 8px 12px #c49685;
+	-webkit-transition: background-color 2s, color 1s; /* Safari */
+	 transition: background-color 2s,color 1s;
+}
+#header #presentation .btn-inscription:hover {background-color: #fff;color:#eb7d4b;}
+
+h2 {font-size: 2.22em;text-align: center;text-transform: uppercase;}
+.ligne {width:120px;height:3px;margin: 10px auto;}
+#programme .ligne {background-color: #14a58c;}
+#programme {background-color: #17c2a4;padding: 125px 10px 70px 10px;}
+#programme p.textintro {text-align: center;margin: 10px 0 80px 0;}
+#programme .languages {width:100%;}
+
+#programme .languages .item {float: left;width:25%;text-align: center;}
+#programme .languages .item img{margin: 0 auto;width:70%;}
+#programme .languages .item img:hover {animation-name: moveimg;
+    animation-duration: 1s;}
+@keyframes moveimg {
+		0%   {width:70%;margin-top: 0;}
+    50%  {width:75%;margin-top: -13px;}
+    100% {width:70%;margin-top: 0;}
+}
+#programme .languages .item h3{text-transform: uppercase;font-size: 1.3em;font-weight:bold;text-align: center;}
+#programme .languages .item p{padding: 10px 25px;text-align:justify;}
+
+#inscription .ligne {background-color: #273a71;}
+#inscription {background-color: #3c5499;padding: 125px 10px 20px 10px;}
+#inscription p.textintro {text-align: center;margin: 10px 0 40px 0;}
+
+label{ display: block;padding-left: 30px;margin-bottom: 5px;font-size: 1.2em;font-weight: bold;margin-top: 50px;}
+form div {float: left;}
+.w50 {width:50%;}
+.w100 {width:100%;}
+input[type=text] {width: 95%;}
+input[type=text].inputerror{border:2px solid red;}
+input[type=email], textarea {width: 100%;}
+input {height:50px;}
+
+input[type=text], input[type=email],textarea {background-color: #273a71;color:#fff;border: none;font-size: 1.2em;padding-left: 30px;margin-bottom: 5px;border-radius:4px;}
+textarea {padding-top: 10px;margin-bottom: 30px;resize: none;}
+input[type=submit] {cursor:pointer;border:none;display: block;margin: 40px auto;background-color: #30bae7;width:275px;color:#fff;font-size: 1.2em;border-radius:4px;}
+input[type=submit]:hover {color: #30bae7;background-color:#fff;}
+.error {color:red;padding-left: 30px;}
+#footer {background-color: #273a71;text-align: center;padding: 30px 0;position: relative;}
+#footer .backtotop {position: absolute;top:-50px;right:20px;text-decoration: none;background-color: #273a71;color:#fff;padding:5px;border-radius:4px;}
+#footer .backtotop:hover {color: #273a71;background-color:#fff;}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #3c5499;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #3c5499;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #3c5499;
+}
+@media screen and (max-width: 800px) {
+		#programme .languages .item {width:50%;}
+		.w50 {width:100%;}
+		input,input[type=text] {width: 100%;}
+}
+@media screen and (max-width: 500px) {
+		#programme .languages .item {width:100%;}
+}

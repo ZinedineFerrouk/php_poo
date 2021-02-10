@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulaire - JS</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+  </head>
+  <body>
+
+    <div class="wrap">
+      <form name="form" action="" method="post" onsubmit="return validation()">
+        <label for="nom">Nom * (3,20)</label>
+        <input type="text" id="nom" name="nom" value="" onblur="verifName('nom',3,20)" placeholder="ici votre nom">
+        <span class="error" id="errornom"></span>
+        <span class="success" id="successnom"></span>
+
+
+        <label for="prenom">Prenom *(4,30)</label>
+        <input type="text" id="prenom" name="prenom" value="" onkeyup="verifName('prenom',4,30)" placeholder="ici votre prenom">
+        <span class="error" id="errorprenom"></span>
+        <span class="success" id="successprenom"></span>
+
+        <label for="message">Message (10,2000)</label>
+        <textarea name="message" id="message" onkeyup="verifName('message',10,2000)"></textarea>
+        <span class="error" id="errormessage"></span>
+        <span class="success" id="successmessage"></span>
+
+        <select id="fruits" name="fruits" onchange="verifSelect('fruits')">
+          <option value="">-- --</option>
+          <option value="banane">Banane</option>
+          <option value="kiwi">Kiwi</option>
+          <option value="papaye">Papaye</option>
+        </select>
+        <span class="error" id="errorfruits"></span>
+
+        <input type="submit" name="submitted" value="Envoyer">
+      </form>
+
+    </div>
+    <script src="asset/js/main.js"></script>
+
+  </body>
+</html>

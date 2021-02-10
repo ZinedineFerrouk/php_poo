@@ -1,0 +1,5 @@
+perso/
+.DS_Store
+composer.phar
+vendor
+.idea/

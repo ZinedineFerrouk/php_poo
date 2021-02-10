@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- directement dans les balises -->
+    <a href="#" onclick="alert('Bonjour le monde')">lien</a>
+    <a href="javascript:alert('Bonjour')">cliquez ici</a>
+    <!-- gestionnaire d'événements -->
+    <!-- onclick, ondblclick, onmouseover, onmouseout, onload, onunload -->
+
+    <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png" alt="logo js" ondblclick="alert('Double click')" onmouseout="alert('la souris est sortie')">
+
+    <button onclick="conversion(6.55,'francs')">Faire une conversion en francs</button>
+    <button onclick="conversion(124.24,'yen')">Faire une conversion en yen</button>
+    <button onclick="conversion(1.18,' dollars')">Faire une conversion en dollar</button>
+    <!-- directement dans le html  -->
+    <script>
+      // alert('Debut de chargement de la page');
+    </script>
+    <p>klkjlkjlkj lk</p>
+    <script>
+      // alert('fin de chargement de la page');
+    </script>
+
+    <!-- dans fichier -->
+    <script type="text/javascript" src="asset/js/main.js"></script>
+
+  </body>
+</html>
