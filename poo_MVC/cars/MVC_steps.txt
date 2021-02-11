@@ -1,0 +1,5 @@
+Etape 1 : Créer un fichier congif.php -> Retourne un tableau avec toutes les infos sur la BDD
+Etape 2 : Créer le controller de notre élément principale
+Etape 3 : Faire les routes
+Etape 4 : Créer le model de notre controller -> requêtes BDD
+Etape 5 : Créer la vue de notre controller
