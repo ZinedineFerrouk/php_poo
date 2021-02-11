@@ -9,6 +9,7 @@ $routes = array(
     // animal
     array('animals','animal','index'),
     array('one-animal','animal','show',array('id')),
+    
     array('addAnimal','animal','new'),
     array('updateAnimal','animal','modifier',array('id')),
     array('deleteAnimal','animal','supprimer',array('id'))
